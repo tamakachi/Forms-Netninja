@@ -30,9 +30,8 @@ form.addEventListener("submit",e =>{
 
 })
 
-//Testing RegEx
-
-const username = 'shaunp'
-
-let result = pattern.test(username)
-console.log(result)
+form.addEventListener("keyup",e=>{
+    if (pattern.test(e.target.value)){
+        form.username.setAttribute("class","success")
+    } else {form.username.setAttribute("class","error")}
+})

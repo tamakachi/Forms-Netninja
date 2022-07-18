@@ -16,3 +16,10 @@ input{
     margin: 10px auto;
     padding: 4px;
 }
+
+.success{
+    border: 6px solid limegreen;
+}
+.error{
+    border: 6px solid crimson;
+}
