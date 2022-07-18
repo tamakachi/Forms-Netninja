@@ -5,15 +5,34 @@
 
 
 const form = document.querySelector(".signup-form")
+const pattern = /^[a-zA-Z]{6,12}$/
+const messagediv = document.querySelector(".message")
 
 form.addEventListener("submit",e =>{
 
     
     e.preventDefault() // prevents refresh default action
     //quick reference to value using dot notation, quicker than creating a selector
-    console.log(e.username.value)
-    // e.username refers to an ID or Name property called username
+    let username = form.username.value
+    // form.username refers to an ID or Name property called username
     // It returns that value
+
+    if (pattern.test(username)){
+// regex datatype .text returns true if the regex is valid and false if invalid
+        messagediv.textContent = "Username is valid"
+
+    } else
+    {
+        messagediv.textContent = "Username must contain only letters and be between 6-12 characters long"
+    }
+
 
 
 })
+
+//Testing RegEx
+
+const username = 'shaunp'
+
+let result = pattern.test(username)
+console.log(result)
