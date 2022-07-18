@@ -8,11 +8,12 @@ const form = document.querySelector(".signup-form")
 
 form.addEventListener("submit",e =>{
 
+    
     e.preventDefault() // prevents refresh default action
     //quick reference to value using dot notation, quicker than creating a selector
     console.log(e.username.value)
     // e.username refers to an ID or Name property called username
     // It returns that value
 
-    
+
 })
